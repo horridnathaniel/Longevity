@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Discovery of the Longevity Disc</title>
+    <meta charset="UTF-8">
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("July 18, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "THE DATE HAS ARRIVED.";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+            setTimeout(updateCountdown, 1000);
+        }
+
+        window.onload = updateCountdown;
+    </script>
+</head>
+
+<body>
+        <div style="font-family:Arial, Helvetica, sans-serif;font-size:100px; text-align:center;" id="countdown">
+            Loading countdown...
+        </div>
+</html>
