@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(255, 173, 41);
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
+}
+
+.countdown {
+    font-size: 24px;
+    font-family: "Courier New", Courier, monospace;
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.blink {
+    animation: blinker 1.2s linear infinite;
+    color: blue;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.content {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: black;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+    color: #999999;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: black;
+    margin: 20px 0;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Discovery of the Longevity Disc</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("June 11, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "THE DATE HAS ARRIVED.";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+            setTimeout(updateCountdown, 1000);
+        }
+
+        window.onload = updateCountdown;
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="header-img" src="assets/header-web-font.jpg">
+            <blink>THE LONGEVITY DISC HAS BEEN FOUND</blink>
+        </div>
+        <div class="countdown" id="countdown">
+            Loading countdown...
+        </div>
+        <hr>
+        <div class="content">
+            <p><strong>May 20, 2002 —</strong> In a stunning archaeological discovery, researchers have unearthed what
+                appears to be the mythical <em>Longevity Disc</em>, a mysterious artifact referenced only in obscure
+                ancient texts and dismissed by most scholars as legend.</p>
+
+            <p>The disc, made of an unidentified alloy, contains an array of cryptic symbols and emits low-frequency
+                vibrations that have yet to be explained. Early <a href="chatroom.html">decoding efforts</a> by international experts have revealed
+                only a single intelligible date:</p>
+
+            <p style="text-align:center; font-size: 18px; color: red;"><strong><span class="blink">June 11,
+                        2025</span></strong></p>
+            <div style="text-align: center;">
+                <p style="font-size: small;">vvv Pre-Save the contents of the disc by clicking below. vvv</p>
+                <a href="https://linktr.ee/sulkworm2014"><button>LONGEVITY</button></a>
+            </div>
+
+
+            <p>What happens on this date is unknown. Theories range from global awakening to cataclysmic events.
+                Governments have been tight-lipped. The full message of the disc remains hidden.</p>
+
+            <hr>
+
+            <h3 style="color:red;">Who is Amator?</h3>
+            <p><a href="access_denied.html">Ancient runes</a> inscribed in the disc reference a being known as <strong>Amator</strong>, a court jester believed to have been
+                gifted with divine insight. Dismissed by kings, he spoke in riddles of time, death, and eternity. Some
+                inscriptions found near the disc suggest a direct link between the artifact and this mysterious figure.
+            </p>
+
+            <p>Legends say Amator <em>"danced with stars and spoke to silence."</em> It is theorized he may have encoded
+                part of his prophecy within the Longevity Disc itself. Some researchers now believe Amator was no mere
+                entertainer — but a conduit of cosmic knowledge.</p>
+
+            <p style="text-align:center;"><a href="#">More on Amator and the disc coming soon.</a></p>
+            <a></a>
+        </div>
+        <hr>
+        <div class="footer">
+            &copy; 2002 Sulkworm - Epimedium Records. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
