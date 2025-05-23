@@ -63,3 +63,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.keyword{
+    color: #a5f8e8;
+}
